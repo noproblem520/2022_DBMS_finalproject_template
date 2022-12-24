@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    DB_DEMO
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
+  <script>
+    function UpdateRow() {
+      // use jquery to retrieve the elements' value
+      var CName = $("#v1").val();
+      var EName = $("#v2").val();
+      var id = $("#PK").val();
+      // use jquery to send the request to http://localhost:3000/users/user
+      $.ajax({
+        method: "PUT",
+        url: "/users/user",
+        data: { CName, EName, id }
+      })
+        .done(function (msg) {
+          // when client side receive the response from server side, reload the page
+          window.location.reload();
+        });
+    }
+
+    // TODO: delete
+    function deleteRow(id) {
+    }
+
+    // TODO: insert
+    function AddRow() {
+    }
+  </script>
+</head>
+
+
+
+<body>
+  <h1>Welcome to DB_DEMO</h1>
+  <br></br>
+
+  <label for="PK">id：</label>
+  <input type="text" name="PK" id="PK">
+  <label for="v1">CName：</label>
+  <input type="text" name="v1" id="v1">
+  <label for="v2">EName：</label>
+  <input type="text" name="v2" id="v2">
+
+  <button onclick="UpdateRow()">Update</button>
+  <button onclick="AddRow()">Add</button>
+
+  <table class="table" style="width:100%;">
+    <th>id</th>
+    <th>CName</th>
+    <th>EName</th>
+
+    <% for(var i=0; i < result.length; i++) { %>
+      <tr>
+        <td>
+          <%= result[i].id %>
+        </td>
+        <td>
+          <%= result[i].CName %>
+        </td>
+        <td>
+          <%= result[i].EName %>
+        </td>
+        <td>
+          <button type="submit" onclick="deleteRow(<%=result[i].id %>)" id=<%=result[i].id %> name=button<%=result[i].id
+              %>>delete</button>
+        </td>
+      </tr>
+      <% } %>
+  </table>
+
+</body>
+</html>
