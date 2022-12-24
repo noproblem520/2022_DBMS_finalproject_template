@@ -5,13 +5,13 @@
 - node, npm: https://nodejs.org/en/download/
 - VSCode: https://code.visualstudio.com/
 - Check if both node and npm are installed correctly  
-![](https://i.imgur.com/9CBIYMN.png)
+  ![](https://i.imgur.com/9CBIYMN.png)
 
 ### 2. Run the project
-- create .env file and set these parameters
+- create .env file and set these parameters  
   ![](https://i.imgur.com/GbEepXv.png)
 - here's the information of test1 database
-![](https://i.imgur.com/MXXdma2.png)
+  ![](https://i.imgur.com/MXXdma2.png)
 - `npm install`
 - `npm start`
 - Now you can open the browser and enter http://localhost:3000 to check if the service is up
