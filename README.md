@@ -8,7 +8,9 @@
   ![](https://i.imgur.com/9CBIYMN.png)
 
 ### 2. Run the project
-
+- create .env file and set these parameters
+  ![](https://i.imgur.com/GbEepXv.png)
+  ![](https://i.imgur.com/MXXdma2.png)
 - `npm install`
 - `npm start`
 - Now you can open the browser and enter http://localhost:3000 to check if the service is up
