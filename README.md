@@ -4,7 +4,7 @@
 
 - node, npm: https://nodejs.org/en/download/
 - VSCode: https://code.visualstudio.com/
-- Check if both node and npm are installed correctly
+- Check if both node and npm are installed correctly  
 ![](https://i.imgur.com/9CBIYMN.png)
 
 ### 2. Run the project
